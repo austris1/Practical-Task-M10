@@ -19,7 +19,7 @@ import org.springframework.web.client.RestClientException;
 @Component
 public class BookRestClientImpl implements BookRestClient {
 
-    private RestClient restClient;
+    private final RestClient restClient;
 
     public BookRestClientImpl(RestClient.Builder builder, ExternalServiceProperties properties) {
         SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
